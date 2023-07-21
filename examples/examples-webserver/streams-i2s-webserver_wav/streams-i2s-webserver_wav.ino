@@ -23,9 +23,9 @@ void setup(){
   Serial.println("starting I2S...");
   auto config = i2sStream.defaultConfig(RX_MODE);
   config.i2s_format = I2S_STD_FORMAT; // if quality is bad change to I2S_LSB_FORMAT https://github.com/pschatzmann/arduino-audio-tools/issues/23
-  config.sample_rate = 22050;
+  config.sample_rate = 48000;
   config.channels = 2;
-  config.bits_per_sample = 16;
+  config.bits_per_sample = 24;
   i2sStream.begin(config);
   Serial.println("I2S started");
 
